@@ -11,12 +11,9 @@ class WeatherFormAction(Action):
     def name(self) -> Text:
         return "action_weather_form_submit"
 
-    def run(
-        self, dispatch: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]
-    ) -> List[Dict]:
+    def run(self, dispatch: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict]:
         city = tracker.get_slot("address")
         date_text = tracker.get_slot("date-time")
-
         date_object = text_to_date(date_text)
 
         if not date_object:  # parse date_time failed
