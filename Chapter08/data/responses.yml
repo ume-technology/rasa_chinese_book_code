@@ -1,4 +1,5 @@
-version: "3.0"
+#version: "3.0"
+version: "3.1"
 responses:
   utter_chitchat/whoyouare:
     - text: 你好，我是Silly，一个专注天气预报的对话机器人。

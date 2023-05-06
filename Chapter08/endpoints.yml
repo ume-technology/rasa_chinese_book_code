@@ -18,11 +18,11 @@ action_endpoint:
 # https://rasa.com/docs/rasa/api/tracker-stores/
 
 tracker_store:
-    type: redis
-    url: localhost
-    port: 6379
-    db: 1
-    password:
+  type: redis
+  url: localhost
+  port: 6379
+  db: 1
+  password:
 
 #tracker_store:
 #    type: mongod
@@ -32,12 +32,12 @@ tracker_store:
 #    password: <password used for authentication>
 
 lock_store:
-    type: "redis"
-    url: localhost
-    port: 6379
-    password:
-    db: 0
-    key_prefix: rasa
+  type: "redis"
+  url: localhost
+  port: 6379
+  password:
+  db: 0
+  key_prefix: rasa
 
 # Event broker which all conversation events should be streamed to.
 # https://rasa.com/docs/rasa/api/event-brokers/

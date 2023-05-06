@@ -1,10 +1,8 @@
 from typing import Any, Text, Dict, List
-
 from rasa_sdk import Tracker, Action
 from rasa_sdk.executor import CollectingDispatcher
-
-from service.weather import get_text_weather_date
-from service.normalization import text_to_date
+from Chapter08.service.weather import get_text_weather_date
+from Chapter08.service.normalization import text_to_date
 
 
 class WeatherFormAction(Action):

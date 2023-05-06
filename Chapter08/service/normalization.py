@@ -4,7 +4,6 @@ from typing import Optional
 
 def text_to_date(text_date: str) -> Optional[datetime.date]:
     """convert text based Chinese date info into datatime object
-
     if the convert is not supprted will return None
     """
 

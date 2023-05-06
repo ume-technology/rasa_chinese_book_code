@@ -15,10 +15,10 @@ class TicketFormAction(FormAction):
         return ["city_depart", "city_arrive", "date"]
 
     def extract_other_slots(
-        self,
-        dispatcher: "CollectingDispatcher",
-        tracker: "Tracker",
-        domain: Dict[Text, Any],
+            self,
+            dispatcher: "CollectingDispatcher",
+            tracker: "Tracker",
+            domain: Dict[Text, Any],
     ) -> Dict[Text, Any]:
         slot_to_fill = tracker.get_slot(REQUESTED_SLOT)
         if not slot_to_fill:
@@ -39,7 +39,7 @@ class TicketFormAction(FormAction):
         }
 
     def submit(
-        self, dispatch: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]
+            self, dispatch: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]
     ) -> List[Dict]:
         # don't using template alone,
         # since the system tracker is not updated yet when render the template,
@@ -53,16 +53,14 @@ class ActionBuyTicket(Action):
         return "action_buy_ticket"
 
     def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
+            self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-
         city_arrive = tracker.get_slot("city_arrive")
         city_depart = tracker.get_slot("city_depart")
         date = tracker.get_slot("date")
-
 
         dispatcher.utter_message(f"BOT 动作：购买「{date}」从「{city_depart}」出发到「{city_arrive}」的车票")
 

@@ -5,12 +5,10 @@ import requests
 import json
 from requests import ConnectionError, HTTPError, TooManyRedirects, Timeout
 
-
 KEY = os.getenv("SENIVERSE_KEY", "")  # API key
 API = "https://api.seniverse.com/v3/weather/daily.json"  # API URL
 UNIT = "c"  # 温度单位
 LANGUAGE = "zh-Hans"  # 查询结果的返回语言
-
 
 one_day_timedelta = datetime.timedelta(days=1)
 
